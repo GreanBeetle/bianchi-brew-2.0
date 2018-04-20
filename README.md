@@ -4,7 +4,7 @@
 
 ####  by John Rykken
 
-#### Bianchi's Brews is a code school project and simple web application. It utilizes CRUD functionality, Rails, and a pSQL database. The core functionality allows users to create, read, update, and delete a list of beers from around the world. In demonstration of a one to many relationship, users may also leave reviews about each beer, i.e. one beer will have many reviews. The applications basic specs are these:      
+#### Bianchi's Brews is a code school project and simple web application. It utilizes CRUD functionality, Rails, and a pSQL database. The core functionality allows users to create, read, update, and delete a list of beers from around the world. In demonstration of a one to many relationship, users may also leave reviews about each beer, i.e. one beer will have many reviews.      
 
 ## Specs
 
