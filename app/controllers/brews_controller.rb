@@ -29,11 +29,18 @@ class BrewsController < ApplicationController
   def update
     @brew = Brew.find(params[:id])
     if @brew.update(brew_params)
-      flash[:notice] = "#{@brew.name} was edited"
+      flash[:notice] = "#{@brew.name} was edited."
       redirect_to brews_path
     else
       render :edit
     end
+  end
+
+  def destroy
+    @brew = Brew.find(params[:id])
+    @brew.destroy
+    flash[:notice] = "#{@brew.name} was deleted."
+    redirect_to brews_path
   end
 
   private
