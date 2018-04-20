@@ -23,7 +23,23 @@
 
 ## Setup
 
-WRITE THIS
+If you have a mac with both Ruby and Rails installed, use command line to navigate to your desktop and run the following command.
+
+`git clone https://github.com/GreanBeetle/bianchi-brew-2.0`
+
+Navigate to the root directory of bianchi-brew-2.0 and run.
+
+`rails db:create`
+
+`rails db:migrate`
+
+`rails db:test:prepare`
+
+`rails db:seed`
+
+`rails server`
+
+Navigate to `localhost:3000` in your browser and explore the app.
 
 ## Built With
 
