@@ -1,33 +1,42 @@
 <div class="card">
-  <h4>ABOUT</h4>
+  <h4 style="margin: 0 auto;">ABOUT</h4>
   <p>Bianchi's Brews features beers that were once made by Greek houses (beers origin state originally = Faker::University.greek_organization), but are now made by planets in the Galactic Empire (beer origin state now = Faker::StarWars.planet). Click on your favorite ambrosia to see details. If you're a college student who's recently imbibed one of these fantastic fermented planetary libations and gotten stumbling, black-out drunk because you're young and don't yet know your limits, leave a review with your thoughts. Did you wake up next to a TonTon on Hoth again? Did you accidently replace another limb with an artifical bionic enhancement? Bianchi's, the weirdest purveyor of beverages on the internet, wants to know!</p>
 </div>
-
-<h1>most reviewed</h1>
-NAME: <%= link_to @most_reviewed.name, brew_path(@most_reviewed) %>
-# of REVIEWS: <%= @most_reviewed.reviews.length %>
-
-<h1>ALL BREWS MADE ON THE DEATH STAR</h1>
-<% @death_star.each do |brew| %>
-  <small><%= link_to brew.name, brew_path(brew) %></small>
-  <small><%= brew.state %></small>
-  <br>
-<% end %>
+<div class="card">
+  <div class="card-header" style="text-align: center;">
+    <h1>MOST REVIEWED | DEATH STAR | RECENTLY ADDED</h1>
+  </div>
+  <div class="row">
+    <div class="col">
+      <h1>most reviewed</h1>
+      NAME: <%= link_to @most_reviewed.name, brew_path(@most_reviewed) %>
+      # of REVIEWS: <%= @most_reviewed.reviews.length %>
+    </div>
+    <div class="col">
+      <h1>DEATH STAR BREWS</h1>
+      <% @death_star.each do |brew| %>
+      BEER NAME: <small><%= link_to brew.name, brew_path(brew) %></small>
+      MADE ON PLANET: <small><%= brew.state %></small>
+      <br>
+      <% end %>
+    </div>
+    <div class="col">
+      <h1>7 RECENT BEERS</h1>
+      <% @seven_most_recent.each do |brew| %>
+        <small><%= link_to brew.name, brew_path(brew) %></small><br>
+      <% end %>
+    </div>
+  </div>
+</div>
 
 
 <div class="card">
-  <div class="card-header">
-    <small><%= link_to "ADD BREW", new_brew_path %></small>
+  <div class="card-header" style="text-align: center;">
+    <h1><%= link_to "ADD BREW!", new_brew_path %></h1>
   </div>
-  <div class="column">
+  <div class="card-body">
     <h1>ALL BEERS</h1>
     <% @brews.each do |brew| %>
-      <small><%= link_to brew.name, brew_path(brew) %></small><br>
-    <% end %>
-  </div>
-  <div class="column">
-    <h1>RECENTLY ADDED BEERS</h1>
-    <% @seven_most_recent.each do |brew| %>
       <small><%= link_to brew.name, brew_path(brew) %></small><br>
     <% end %>
   </div>
