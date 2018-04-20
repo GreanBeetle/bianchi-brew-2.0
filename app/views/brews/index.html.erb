@@ -1,0 +1,12 @@
+<div class="jumbotron">
+  <h1>HEY MOTHER FUCKER. YOU HAVE ARRIVED.</h1>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <h1>BREWS</h1>
+  </div>
+  <% @brews.each do |brew| %>
+    <small><%= link_to brew.name %></small><br>
+  <% end %>
+</div>
