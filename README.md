@@ -16,9 +16,9 @@
 * On the beer detail page, users will be able to update and delete beers.
 * On the detail page, users may leave reviews.
 * Each review will consist of an author, review content, and rating.
-* Code will utilize scopes and to filter beers by date added, most reviewed, and Star Wars planet of origin.
+* Code will utilize scopes and filter beers by date added, most reviewed, and Star Wars planet of origin.
 * Validations will ensure that (1) All fields are filled in. (2) Ratings are integers between one and five. (3) Review content is between 50 and 250 characters.
-* With `rails db:seed` and Gem 'Faker', the development database will seed 50 beers and 250 reviews.
+* With `rails db:seed` and Gem 'Faker', the development database will seed 50 beers and **__260__** reviews.
 * Flash messages will display after (1) A beer is created. (2) A beer is edited. (3) A beer is deleted. (4) A review is added.
 
 ## Setup
