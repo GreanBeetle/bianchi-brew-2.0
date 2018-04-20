@@ -9,4 +9,8 @@ class BrewsController < ApplicationController
     render :show
   end
 
+  def new
+    @brew = Brew.new
+  end
+
 end

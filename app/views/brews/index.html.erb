@@ -4,7 +4,7 @@
 
 <div class="card">
   <div class="card-header">
-    <h2></h2>
+    <small><%= link_to "ADD BREW", new_brew_path %></small>
   </div>
   <% @brews.each do |brew| %>
   <small><%= link_to brew.name, brew_path(brew) %></small><br>
