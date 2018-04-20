@@ -1,0 +1,9 @@
+$header-font: 'Stylish', sans-serif;
+
+.jumbotron {
+  text-align: center;
+  h1 {
+    font-family: $header-font;
+    font-size: 100px;
+  }
+}
