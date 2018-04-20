@@ -2,8 +2,8 @@ require 'rails_helper'
 
 describe "adding a brew" do
   it "adds a beer to the database" do
-    visit brews_path
-    save_and_open_page
+    visit root_path
+    
     click_on 'ADD BREW!'
     fill_in 'Name', :with => 'Paulener Hefeweizen'
     fill_in 'Price', :with => 10
