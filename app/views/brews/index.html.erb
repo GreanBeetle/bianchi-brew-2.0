@@ -1,12 +1,22 @@
-<div class="jumbotron">
-  <h1>Bianchi's Brews</h1>
+<div class="card">
+  <h4>ABOUT</h4>
+  <p>Bianchi's Brews has beers made by Greek houses from across the U.S. Click on your favorite ambrosia to see details. If you're a college student who's recently imbibed one of these fantastic fermented libations and gotten stumbling, black-out drunk because you're young and don't yet know your limits, leave a review and tell us what you thought. Did you wake up next to a goat in South Dakota again? Did you accidently sell another of your kidneys? Bianchi's Brews wants to know.</p>
 </div>
 
 <div class="card">
   <div class="card-header">
     <small><%= link_to "ADD BREW", new_brew_path %></small>
   </div>
-  <% @brews.each do |brew| %>
-  <small><%= link_to brew.name, brew_path(brew) %></small><br>
-  <% end %>
+  <div class="column">
+    <h1>ALL BEERS</h1>
+    <% @brews.each do |brew| %>
+      <small><%= link_to brew.name, brew_path(brew) %></small><br>
+    <% end %>
+  </div>
+  <div class="column">
+    <h1>SEVEN MOST RECENT BEERS</h1>
+    <% @seven_most_recent.each do |brew| %>
+      <small><%= link_to brew.name, brew_path(brew) %></small><br>
+    <% end %>
+  </div>
 </div>

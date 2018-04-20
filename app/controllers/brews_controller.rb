@@ -2,11 +2,12 @@ class BrewsController < ApplicationController
 
   def index
     @brews = Brew.all
+    @seven_most_recent = Brew.seven_most_recent
   end
 
   def show
     @brew = Brew.find(params[:id])
-    @reviews = @brew.reviews 
+    @reviews = @brew.reviews
   end
 
   def new
