@@ -4,7 +4,7 @@
 </div>
 
 <h1>most reviewed</h1>
-NAME: <%= @most_reviewed.name %>
+NAME: <%= link_to @most_reviewed.name, brew_path(@most_reviewed) %>
 # of REVIEWS: <%= @most_reviewed.reviews.length %>
 
 <h1>ALL BREWS MADE ON THE DEATH STAR</h1>
