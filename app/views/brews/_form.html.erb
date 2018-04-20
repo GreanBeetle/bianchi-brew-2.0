@@ -1,6 +1,12 @@
 <%= form_for @brew do |f| %>
-  NAME: <%= f.text_field :name %> |
-  PRICE: <%= f.number_field :price %> |
-  STATE: <%= f.text_field :state %> | 
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br>
+  <%= f.label :price %>
+  <%= f.number_field :price %>
+  <br>
+  <%= f.label :state %>
+  <%= f.text_field :state %>
+  <br>  
   <%= f.submit  %>
 <% end %>
