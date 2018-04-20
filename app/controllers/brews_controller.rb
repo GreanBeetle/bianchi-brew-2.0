@@ -6,7 +6,6 @@ class BrewsController < ApplicationController
 
   def show
     @brew = Brew.find(params[:id])
-    render :show
   end
 
   def new
@@ -20,6 +19,20 @@ class BrewsController < ApplicationController
       redirect_to brews_path
     else
       render :new
+    end
+  end
+
+  def edit
+    @brew = Brew.find(params[:id])
+  end
+
+  def update
+    @brew = Brew.find(params[:id])
+    if @brew.update(brew_params)
+      flash[:notice] = "#{@brew.name} was edited"
+      redirect_to brews_path
+    else
+      render :edit
     end
   end
 

@@ -1,3 +1,12 @@
 <h2>BREW: <%= @brew.name %></h2>
 <h2>PRICE: $<%= @brew.price %></h2>
 <h2>STATE: <%= @brew.state %></h2>
+<br>
+<p><%= link_to "HOME", brews_path %></p>
+<p><%= link_to "ADD REVIEW", new_brew_review_path(@brew) %></p>
+<p><%= link_to "EDIT", edit_brew_path %></p>
+<p><%= link_to "DELETE", brew_path, :data =>
+  {
+    :confirm => "You sure?", 
+    :method => "delete"
+  } %></p>
