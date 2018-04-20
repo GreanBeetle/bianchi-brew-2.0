@@ -4,7 +4,7 @@ Review.destroy_all
 50.times do |i|
   name = Faker::Beer.name
   price = Faker::Number.number(2)
-  state = Faker::University.greek_organization
+  state = Faker::StarWars.planet
   Brew.create!(name: name, price: price, state: state)
   @brew_id = Brew.last.id
   5.times do |i|

@@ -4,6 +4,7 @@ class BrewsController < ApplicationController
     @brews = Brew.all
     @seven_most_recent = Brew.seven_most_recent
     @most_reviewed = Brew.most_reviewed
+    @death_star = Brew.death_star
   end
 
   def show

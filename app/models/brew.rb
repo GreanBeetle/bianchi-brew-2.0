@@ -6,6 +6,8 @@ class Brew < ActiveRecord::Base
 
   scope :seven_most_recent, -> {order(created_at: :desc).limit(7)}
 
+  scope :death_star, -> { where(state: "Death Star") }
+
   def self.most_reviewed
     brews = self.all
     @brew = brews.last
