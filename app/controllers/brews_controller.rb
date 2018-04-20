@@ -3,6 +3,7 @@ class BrewsController < ApplicationController
   def index
     @brews = Brew.all
     @seven_most_recent = Brew.seven_most_recent
+    @most_reviewed = Brew.most_reviewed
   end
 
   def show

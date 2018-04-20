@@ -4,7 +4,18 @@ class Brew < ActiveRecord::Base
   validates :price, :presence => true
   validates :state, :presence => true
 
-  
-
   scope :seven_most_recent, -> {order(created_at: :desc).limit(7)}
+
+  def self.most_reviewed
+    brews = self.all
+    @brew = brews.last
+    brews.each do |brew|
+      if brew.reviews.length > @brew.reviews.length
+        @brew = brew
+      end
+    end
+    @brew
+  end
+
+
 end
