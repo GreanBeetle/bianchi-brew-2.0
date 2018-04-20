@@ -4,9 +4,9 @@
 
 <div class="card">
   <div class="card-header">
-    <h1>BREWS</h1>
+    <h2></h2>
   </div>
   <% @brews.each do |brew| %>
-    <small><%= link_to brew.name %></small><br>
+  <small><%= link_to brew.name, brew_path(brew) %></small><br>
   <% end %>
 </div>
