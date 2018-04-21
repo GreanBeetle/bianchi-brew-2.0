@@ -15,7 +15,7 @@
     <div class="col">
       <h1>DEATH STAR BREWS</h1>
       <% @death_star.each do |brew| %>
-      BEER NAME: <small><%= link_to brew.name, brew_path(brew) %></small>
+      BEER NAME: <small class="link"><%= link_to brew.name, brew_path(brew) %></small>
       MADE ON PLANET: <small><%= brew.state %></small>
       <br>
       <% end %>
