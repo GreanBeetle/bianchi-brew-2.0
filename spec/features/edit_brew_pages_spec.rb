@@ -1,4 +1,4 @@
-equire 'rails_helper'
+require 'rails_helper'
 
 describe "editing a beer" do
   it "edits beer details" do
